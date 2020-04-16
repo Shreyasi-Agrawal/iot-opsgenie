@@ -1,0 +1,28 @@
+{
+  "fitbit": {
+    "appUUID": "0fa5a245-1a6e-4b1e-a7cc-a6bf62ae7976",
+    "appType": "app",
+    "appDisplayName": "HRAlert",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity"
+    ],
+    "buildTargets": [
+      "higgs",
+      "meson",
+      "gemini",
+      "mira"
+    ],
+    "i18n": {
+      "en": {
+        "name": "HRAlert"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
+  }
+}
