@@ -70,21 +70,10 @@ function sendMessage(hrm) {
   var data = {
     hr: hrm
   }
-  console.log("HRM - ", JSON.stringify(data));
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
     // Send the data to peer as a message
     messaging.peerSocket.send(data);
   }
 }
-
-// Listen for the onmessage event
-messaging.peerSocket.onmessage = function(message) {
-  console.log("Initiating heart rate in device");
-  if(message.fetch == true) {
-    fetchHeartRate();
-  }
-}
-
-//fetchHeartRate();
 
 setInterval(fetchHeartRate, 1000 * 10);
